@@ -5,6 +5,14 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content={
+    title: 'paracoders article',
+    heading: 'article-one',
+    date: '5sep,2018',
+    content:'    <p>hello  paracoder i am the teamleaders f paraocders team</p>'
+    };
+    
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
